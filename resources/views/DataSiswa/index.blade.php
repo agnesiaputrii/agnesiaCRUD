@@ -30,7 +30,7 @@
                     <td class="align-middle">
                         <div class="group d-flex gap-3" role="group">
                             <a href="{{ route('datasiswa.show', $item->id) }}" type="button" class="btn btn-primary">Show</a>
-                            <a href="" type="button" class="btn btn-secondary">Edit</a>
+                            <a href="{{ route('datasiswa.edit', $item->id) }}" class="btn btn-secondary">Edit</a>
                             <form action="{{ route('datasiswa.destroy', $item->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('delete?')">
                                 @csrf
                                 @method('delete')
